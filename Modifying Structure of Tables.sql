@@ -5,7 +5,7 @@ show databases;  -- showing databases in server
 use dummy_db;
 
 CREATE TABLE employees (
-  emp_id      INT           PRIMARY KEY,
+  emp_id      INT           PRIMARY KEY ,
   first_name  VARCHAR(50)   NOT NULL,
   last_name   VARCHAR(50)   NOT NULL,
   age         INT           CHECK (age >= 18),

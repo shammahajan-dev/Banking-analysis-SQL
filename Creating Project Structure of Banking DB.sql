@@ -4,6 +4,9 @@ show databases;
 create database bankingDB;
 
 use bankingDB;
+drop database 1school_db;
+show databases;
+
 
 -- creating tables
 CREATE TABLE Customers (
