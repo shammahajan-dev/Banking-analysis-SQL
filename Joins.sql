@@ -41,7 +41,7 @@ ON c.CustomerID = t.CustomerID;
 -- update 310 Transaction_ID with CustomerID= null so it will be displayed in right join.
 update transactions set CustomerID=null where TransactionID=310;
 
--- Task 4: Generate Deposit Transactions Above ₹50,000
+-- Task 4: Generate Deposit Transactions Above ₹10,000
 SELECT 
     c.CustomerID,
     CONCAT(c.FirstName, ' ', c.LastName) AS CustomerName,
@@ -53,5 +53,5 @@ FROM Customers c
 INNER JOIN Transactions t
 ON c.CustomerID = t.CustomerID
 WHERE t.TransactionType = 'Deposit'
-AND t.Amount > 50000
+AND t.Amount > 10000
 ORDER BY t.Amount DESC;
