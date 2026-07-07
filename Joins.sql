@@ -6,7 +6,8 @@ select * from transactions;
 -- customer :- id,first name,trans_id,type,amount
 
 use bankingDB;
-select * from transactions;
+select * from transactions
+union
 select * from customers;
 
 
@@ -55,3 +56,7 @@ ON c.CustomerID = t.CustomerID
 WHERE t.TransactionType = 'Deposit'
 AND t.Amount > 10000
 ORDER BY t.Amount DESC;
+
+
+-- ========================================== Cross Join ====================================================
+select c.CustomerID,c.FirstName,c.Email,t.TransactionID,t.TransactionDate,t.Amount from customers c cross join transactions t ;
